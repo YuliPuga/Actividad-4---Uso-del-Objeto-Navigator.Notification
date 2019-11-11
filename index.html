@@ -25,21 +25,19 @@
  src="cordova.js"></script>
  
  <script type="text/javascript" charset="utf-8">
- 
-function onDeviceReady(){
- navigator.notification.alert("PhoneGap is ready!");
- }
+function onDeviceReady() {
+navigator.notification.alert("PhoneGap is ready!");
+}
 
- function confirm() {
-    navigator.notification.confirm(
-        'You are the winner!');}
-  
- function prompt(){
-    navigator.notification.promt(' ');}
-  
- function Beep(){
-    navigator.notification.beep(2);}
-
+function conf() {
+navigator.notification.confirm('You are the winner!');
+}
+function onPrompt() {
+   navigator.notification.prompt('');
+}
+function beep() {
+navigator.notification.beep(2);
+}
  </script>
  
  </head>
@@ -49,9 +47,17 @@ function onDeviceReady(){
  <p>Yulissa Elizabeth Rojas Puga</p>
  <p>Contreras Carranza Cruz</p>
 
- <a type"button" onclick="onDeviceReady();"  id="boton1" > alert </a>
- <a type"button" onclick="confirm();" id="boton2" > confirm </a>
- <a type"button" onclick="prompt();" id="boton3" > prompt </a>
- <a type"button" onclick="Beep();" id="boton4" > beep </a>
+  <input id="clickMe1" type="button" class="but" value="alert" onclick="onDeviceReady();" />
+<a> alert </a>
+
+  <input id="clickMe2" type="button" class="but1" value="confirm" onclick="conf();" />
+<a> confirm </a>
+
+  <input id="clickMe3" type="button" class="but2" value="prompt" onclick="prompt();" />
+<a> prompt </a>
+
+  <input id="clickMe4" type="button" class="but3" value="beep" onclick="Beep();" />
+<a> beep </a>
+  
  </body>
 </html>
