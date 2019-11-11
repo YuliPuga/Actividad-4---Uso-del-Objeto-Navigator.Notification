@@ -26,9 +26,7 @@
  
  <script type="text/javascript" charset="utf-8">
  
- function showAlert(){
- navigator.notification.alert("PhoneGap is ready!"); }
- 
+
 function onPrompt(results){
     navigator.notification.alert(
         ! ! “Texto del mensaje a mostrar”,
@@ -46,7 +44,7 @@ function onPrompt(results){
  <p>Yulissa Elizabeth Rojas Puga</p>
  <p>Contreras Carranza Cruz</p>
 
- <a onclick="showAlert();"  id="boton1" > alert </a>
+ <a onclick="navigator.notification.alert("PhoneGap is ready!");"  id="boton1" > alert </a>
  <a onclick="" id="boton2" > confirm </a>
  <a onclick="onPrompt();" id="boton3" > prompt </a>
  <a onclick="navigator.notification.beep(2);" id="boton4" > beep </a>
