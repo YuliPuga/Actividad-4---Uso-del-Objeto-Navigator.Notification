@@ -26,11 +26,31 @@
  
  <script type="text/javascript" charset="utf-8">
  
-
- 
  function showAlert(){
  navigator.notification.alert("PhoneGap is ready!");
  }
+
+  function showConfirm() {
+    navigator.notification.confirm(
+        "¿Quieres salir?",
+        onConfirm,
+        "Salir",
+        "Sí,No"
+        );
+}
+  
+  function showPrompt(){
+    navigator.notification.alert(
+        ! ! “Texto del mensaje a mostrar”,
+        ! ! trasNotificacion,
+        ! ! “Título ventana”,
+        ! ! “Ok”
+        );
+}
+  
+  function showBeep(){
+    navigator.notification.beep(2);
+}
   
  </script>
  
@@ -42,8 +62,8 @@
  <p>Contreras Carranza Cruz</p>
 
  <a onclick="showAlert();"  id="boton1" > alert </a>
- <a id="boton2" > confirm </a>
- <a id="boton3" > prompt </a>
- <a id="boton4" > beep </a>
+ <a onclick="showConfirm();" id="boton2" > confirm </a>
+ <a onclick="showPrompt();" id="boton3" > prompt </a>
+ <a onclick="showBeep();" id="boton4" > beep </a>
  </body>
 </html>
