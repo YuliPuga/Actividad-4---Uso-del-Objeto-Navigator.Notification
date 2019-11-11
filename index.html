@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+
+<style >
+  #boton1, #boton2, #boton3, #boton4{
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+  }
+</style>
+
+
+ <meta http-equiv="Content-type" content="text/html;
+ charset=utf-8">
+ <meta name="viewport" id="viewport"
+ content="width=device-width, height=device-height,
+ initial-scale=1.0, maximum-scale=1.0,
+ user-scalable=no;" />
+ <script type="text/javascript" charset="utf-8"
+ src="cordova.js"></script>
+ 
+ <script type="text/javascript" charset="utf-8">
+
+ 	const boton = document.querySelector("#boton1");
+// Agregar listener
+boton.addEventListener("click", onDeviceReady{
+	// Aquí todo el código que se ejecuta cuando se da click al botón
+	//alert("Le has dado click");
+});
+
+ function onDeviceReady() {
+ navigator.notification.alert("Esta es una Alerta!");
+ }
+ </script>
+ 
+ </head>
+ <body onload="onBodyLoad()">
+ <h1>HelloWorld2</h1>
+ <p>This is a sample PhoneGap application.</p>
+ <p>Yulissa Elizabeth Rojas Puga</p>
+ <p>Contreras Carranza Cruz</p>
+
+ <a id="boton1" > alert </a>
+ <a id="boton2" > confirm </a>
+ <a id="boton3" > prompt </a>
+ <a id="boton4" > beep </a>
+ </body>
+</html>
