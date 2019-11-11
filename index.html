@@ -26,14 +26,25 @@
  
  <script type="text/javascript" charset="utf-8">
  
+function onDeviceReady(){
+ navigator.notification.alert("PhoneGap is ready!");
+ }
 
-function onPrompt(results){
-    navigator.notification.alert(
-        ! ! “Texto del mensaje a mostrar”,
-        ! ! trasNotificacion,
-        ! ! “Título ventana”,
-        ! ! “Ok”
+ function Confirm() {
+    navigator.notification.confirm(
+        '¿Quieres salir?',
+        onConfirm,
+        'Salir',
+        'Sí,No'
         );}
+  
+ function Prompt(){
+    navigator.notification.promt(
+        “Ok”
+        );}
+  
+ function Beep(){
+    navigator.notification.beep(2);}
 
  </script>
  
@@ -44,9 +55,9 @@ function onPrompt(results){
  <p>Yulissa Elizabeth Rojas Puga</p>
  <p>Contreras Carranza Cruz</p>
 
- <a onclick="navigator.notification.alert("PhoneGap is ready!");"  id="boton1" > alert </a>
- <a onclick="" id="boton2" > confirm </a>
- <a onclick="onPrompt();" id="boton3" > prompt </a>
- <a onclick="navigator.notification.beep(2);" id="boton4" > beep </a>
+ <a onclick="onDeviceReady();"  id="boton1" > alert </a>
+ <a onclick="Confirm();" id="boton2" > confirm </a>
+ <a onclick="Prompt();" id="boton3" > prompt </a>
+ <a onclick="Beep();" id="boton4" > beep </a>
  </body>
 </html>
