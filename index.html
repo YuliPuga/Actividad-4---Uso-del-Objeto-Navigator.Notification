@@ -28,18 +28,7 @@
  
  function showAlert(){
  navigator.notification.alert("PhoneGap is ready!"); }
-
-function onConfirm(buttonIndex) {
-    alert('You selected button ' + buttonIndex);
-}
-
-navigator.notification.confirm(
-    'You are the winner!', // message
-     onConfirm,            // callback to invoke with index of button pressed
-    'Game Over',           // title
-    ['Restart','Exit']     // buttonLabels
-);
-  
+ 
 function showPrompt(){
     navigator.notification.alert(
         ! ! “Texto del mensaje a mostrar”,
@@ -60,8 +49,13 @@ function showBeep(){
  <p>Contreras Carranza Cruz</p>
 
  <a onclick="showAlert();"  id="boton1" > alert </a>
- <a onclick="onConfirm();" id="boton2" > confirm </a>
+ <a onclick="navigator.notification.confirm(
+    'You are the winner!', // message
+     onConfirm,            // callback to invoke with index of button pressed
+    'Game Over',           // title
+    ['Restart','Exit']     // buttonLabels
+);" id="boton2" > confirm </a>
  <a onclick="showPrompt();" id="boton3" > prompt </a>
- <a onclick="showBeep();" id="boton4" > beep </a>
+ <a onclick="navigator.notification.beep(2);" id="boton4" > beep </a>
  </body>
 </html>
