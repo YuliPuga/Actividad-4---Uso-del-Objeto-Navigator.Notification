@@ -25,7 +25,9 @@
  src="cordova.js"></script>
  
  <script type="text/javascript" charset="utf-8">
-
+ function onDeviceReady() {
+ navigator.notification.alert("Esta es una Alerta!");
+ }
  </script>
  
  </head>
@@ -35,7 +37,7 @@
  <p>Yulissa Elizabeth Rojas Puga</p>
  <p>Contreras Carranza Cruz</p>
 
- <a onclick="navigator.notification.alert("Esta es una Alerta!")"  id="boton1" > alert </a>
+ <a onclick="onDeviceReady"  id="boton1" > alert </a>
  <a id="boton2" > confirm </a>
  <a id="boton3" > prompt </a>
  <a id="boton4" > beep </a>
