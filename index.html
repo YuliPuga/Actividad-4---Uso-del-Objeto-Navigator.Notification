@@ -27,17 +27,18 @@
  <script type="text/javascript" charset="utf-8">
  
  function showAlert(){
- navigator.notification.alert("PhoneGap is ready!");
- }
+ navigator.notification.alert("PhoneGap is ready!"); }
 
-function showConfirm(){
-    navigator.notification.confirm(
-        "¿Quieres salir?",
-        onConfirm,
-        "Salir",
-        "Sí,No"
-        );
+function onConfirm(buttonIndex) {
+    alert('You selected button ' + buttonIndex);
 }
+
+navigator.notification.confirm(
+    'You are the winner!', // message
+     onConfirm,            // callback to invoke with index of button pressed
+    'Game Over',           // title
+    ['Restart','Exit']     // buttonLabels
+);
   
 function showPrompt(){
     navigator.notification.alert(
@@ -45,13 +46,10 @@ function showPrompt(){
         ! ! trasNotificacion,
         ! ! “Título ventana”,
         ! ! “Ok”
-        );
-}
+        );}
   
-  function showBeep(){
-    navigator.notification.beep(2);
-}
-  
+function showBeep(){
+    navigator.notification.beep(2);} 
  </script>
  
  </head>
@@ -62,7 +60,7 @@ function showPrompt(){
  <p>Contreras Carranza Cruz</p>
 
  <a onclick="showAlert();"  id="boton1" > alert </a>
- <a onclick="showConfirm();" id="boton2" > confirm </a>
+ <a onclick="onConfirm();" id="boton2" > confirm </a>
  <a onclick="showPrompt();" id="boton3" > prompt </a>
  <a onclick="showBeep();" id="boton4" > beep </a>
  </body>
