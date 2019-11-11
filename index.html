@@ -33,7 +33,7 @@ function conf() {
 navigator.notification.confirm('You are the winner!');
 }
 function onPrompt() {
-   navigator.notification.prompt('');
+   navigator.notification.prompt(' ');
 }
 function beep() {
 navigator.notification.beep(2);
@@ -53,7 +53,7 @@ navigator.notification.beep(2);
   <input id="clickMe2" type="button" class="but1" value="confirm" onclick="conf();" />
 <a> confirm </a>
 
-  <input id="clickMe3" type="button" class="but2" value="prompt" onclick="prompt();" />
+  <input id="clickMe3" type="button" class="but2" value="prompt" onclick="onPrompt();" />
 <a> prompt </a>
 
   <input id="clickMe4" type="button" class="but3" value="beep" onclick="Beep();" />
